@@ -1,13 +1,10 @@
 import re
 
-# NOTE: There are only a few tests included, so multiple solutions will work.
-# Feel free to encourage students to find oversights and add tests to this lab!
+# Matches names with capitalized first letters, hyphens, or apostrophes
+name_regex = re.compile(r"^[A-Z][a-zA-Z']+([ -][A-Z][a-zA-Z']+)*$")
 
-name = r""
-name_regex = re.compile(name)
+# Matches phone numbers in different formats
+phone_regex = re.compile(r"^(\(\d{3}\) |\d{3}-?)\d{3}-?\d{4}$")
 
-phone_number = r""
-phone_regex = re.compile(phone_number)
-
-email_address = r""
-email_regex = re.compile(email_address)
+# Matches valid email addresses
+email_regex = re.compile(r"^[a-zA-Z][a-zA-Z0-9.]*@[a-zA-Z]+\.[a-zA-Z]{2,}$")
